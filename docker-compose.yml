@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  reverse_proxy:
+    container_name: nginx
+    image: nginx:v1
+    ports:
+      - "80:80"
+  homepage:
+    container_name: homepage
+    image: homepage:v1
+    ports:
+      - "4200:4200"
+  about:
+    container_name: about
+    image: about:v1
+    ports:
+      - "4300:4300"
